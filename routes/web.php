@@ -5,6 +5,11 @@
  * Routes that are used between both frontend and backend.
  */
 
+
+Route::get('/projects', 'ProjectsController@index');
+
+Route::get('/projects/{id}', 'ProjectsController@get_hours');
+
 // Switch between the included languages
 Route::get('lang/{lang}', 'LanguageController');
 

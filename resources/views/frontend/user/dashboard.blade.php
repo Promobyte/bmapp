@@ -20,6 +20,12 @@
                                     <h4 class="card-title">
                                         {{ $logged_in_user->name }}<br/>
                                     </h4>
+                                        <?php
+                                    foreach ($projects as $project) {
+                                        echo $project->title;
+                                    }
+                                        ?>
+
 
                                     <p class="card-text">
                                         <small>

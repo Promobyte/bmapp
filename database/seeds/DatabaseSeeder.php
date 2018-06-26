@@ -18,6 +18,10 @@ class DatabaseSeeder extends Seeder
 
         $this->call(AuthTableSeeder::class);
 
+        $this->call(ProjectsTableSeeder::class);
+
+        $this->call(ProjectUserDataSeeder::class);
+
         Model::reguard();
     }
 }
