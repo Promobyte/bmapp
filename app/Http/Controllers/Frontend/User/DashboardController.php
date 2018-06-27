@@ -30,7 +30,7 @@ class DashboardController extends Controller
 
         }
 
-        return view('frontend.user.dashboard', ['projects' => $projects]);
+        return view('frontend.projects.index', ['projects' => $projects]);
     }
 
 

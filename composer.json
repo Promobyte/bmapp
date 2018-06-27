@@ -16,7 +16,6 @@
         "laravel/framework": "5.6.*",
         "laravel/socialite": "^3.0",
         "laravel/tinker": "^1.0",
-        "laravelcollective/html": "^5.6",
         "spatie/laravel-html": "^2.4",
         "spatie/laravel-permission": "^2.5",
         "webpatser/laravel-uuid": "^3.0"
@@ -93,7 +92,13 @@
             "./vendor/bin/php-cs-fixer fix resources/  --show-progress=estimating",
             "./vendor/bin/php-cs-fixer fix routes/  --show-progress=estimating",
             "./vendor/bin/php-cs-fixer fix tests/  --show-progress=estimating"
+        ],
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "php artisan ide-helper:generate",
+            "php artisan ide-helper:meta"
         ]
+
     },
     "config": {
         "preferred-install": "dist",

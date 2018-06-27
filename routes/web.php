@@ -6,10 +6,12 @@
  */
 
 
-Route::get('/projects', 'ProjectsController@index');
+Route::get('projects', 'ProjectsController@index');
+Route::get('project', '/Backend/Auth/ProjectController@index');
+Route::post('login', 'ProjectsController@index');
 
-Route::get('/projects/{id}', 'ProjectsController@get_hours');
-Route::post('/projects/{id}', 'ProjectsController@add_hours');
+Route::get('projects/{id}', 'ProjectsController@get_hours');
+Route::post('projects/{id}', 'ProjectsController@add_hours');
 
 // Switch between the included languages
 Route::get('lang/{lang}', 'LanguageController');

@@ -2,6 +2,7 @@
 
 use App\Models\Auth\User;
 use Illuminate\Database\Seeder;
+use Faker\Factory as Faker;
 
 /**
  * Class UserTableSeeder.
@@ -65,14 +66,21 @@ class UserTableSeeder extends Seeder
             'confirmed'         => true,
         ]);
 
-        User::create([
-            'first_name'        => 'Glen Roar',
-            'last_name'         => 'Hansen',
-            'email'             => 'glen@user.com',
-            'password'          => 'secret',
-            'confirmation_code' => md5(uniqid(mt_rand(), true)),
-            'confirmed'         => true,
-        ]);
+
+
+        $faker = Faker::create();
+        foreach (range(1, 35) as $index) {
+
+            User::create([
+                'first_name'        => $faker->firstName,
+                'last_name'         => $faker->lastName,
+                'email'             => $faker->email,
+                'password'          => 'secret',
+                'confirmation_code' => md5(uniqid(mt_rand(), true)),
+                'confirmed'         => true,
+            ]);
+
+        }
 
         $this->enableForeignKeys();
     }

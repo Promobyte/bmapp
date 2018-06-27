@@ -66,5 +66,9 @@ Route::group([
         Route::group(['namespace' => 'Role'], function () {
             Route::resource('role', 'RoleController', ['except' => ['show']]);
         });
+
+        Route::group(['namespace' => 'Project'], function () {
+            Route::get('project', 'ProjectController@index');
+        });
     });
 });

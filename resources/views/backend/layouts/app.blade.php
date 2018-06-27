@@ -11,6 +11,7 @@
     <title>@yield('title', app_name())</title>
     <meta name="description" content="@yield('meta_description', 'Laravel 5 Boilerplate')">
     <meta name="author" content="@yield('meta_author', 'Anthony Rappa')">
+    <script defer src="/js/fontawesome-all.js"></script>
     @yield('meta')
 
     {{-- See https://laravel.com/docs/5.5/blade#stacks for usage --}}
